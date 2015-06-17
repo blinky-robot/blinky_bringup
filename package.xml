@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <name>blinky_bringup</name>
+  <version>0.1.0</version>
+  <description>Startup for Blinky</description>
+
+  <maintainer email="logans@cottsay.net">Scott K Logan</maintainer>
+
+  <license>BSD</license>
+
+  <!-- <url type="website">http://wiki.ros.org/blinky_bringup</url> -->
+
+  <author email="logans@cottsay.net">Scott K Logan</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslaunch</build_depend>
+  <run_depend>myahrs_driver</run_depend>
+  <run_depend>roslaunch</run_depend>
+</package>
