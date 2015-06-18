@@ -7,10 +7,13 @@
 
     <include file="$(find blinky_base)/launch/base.launch" />
 
-    <node name="myahrs_driver" pkg="myahrs_driver" type="myahrs_driver" output="screen" />
+    <node name="myahrs_driver" pkg="myahrs_driver" type="myahrs_driver" output="screen">
+      <param name="publish_tf" value="false" />
+    </node>
 
     <node name="neato_laser_publisher" pkg="xv_11_laser_driver" type="neato_laser_publisher" output="screen">
       <param name="firmware_version" value="2" />
+      <param name="frame_id" value="lidar" />
     </node>
 
     <node name="pololu_smc_driver" pkg="pololu_smc_driver" type="smc_driver_node" output="screen">
@@ -18,6 +21,8 @@
       <param name="disableSafeStart" value="true" />
       <param name="lowVinShutoffMv" value="10000" />
     </node>
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
 
     <node name="lidar_control" pkg="rostopic" type="rostopic" args="pub joint_trajectory trajectory_msgs/JointTrajectory &quot;{header: auto, joint_names: ['motor'],points: [{velocities: [-2048]}]}&quot; -l -r 20" output="screen"/>
   </group>
