@@ -1,0 +1,14 @@
+blinky_hardware_node:
+  scservo_driver:
+    port: /dev/robot/servo
+  vesc_driver:
+    port: /dev/robot/esc
+  smc_driver:
+    port: /dev/robot/lidar_controller
+
+myahrs_driver:
+  port: /dev/robot/imu
+
+neato_laser_publisher:
+  port: /dev/robot/lidar
+
