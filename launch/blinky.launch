@@ -30,7 +30,7 @@
 
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
 
-    <node name="robot_pose_ekf" pkg="robot_pose_ekf" type="robot_pose_ekf" respawn="true" output="screen">
+    <!--node name="robot_pose_ekf" pkg="robot_pose_ekf" type="robot_pose_ekf" respawn="true" output="screen">
       <param name="freq" value="50" />
       <param name="imu_used" value="true" />
       <param name="odom_used" value="true" />
@@ -38,7 +38,7 @@
       <param name="sensor_timeout" value="0.3" />
       <param name="vo_used" value="false" />
       <remap from="imu_data" to="imu/data_fixed" />
-    </node>
+    </node-->
 
     <node name="imu_transformer" pkg="imu_transformer" type="imu_transformer_node" respawn="true" output="screen">
       <param name="target_frame" value="base_link" />
@@ -48,6 +48,6 @@
       <remap from="imu_out/mag" to="imu/mag_fixed" />
     </node>
 
-    <node name="lidar_control" pkg="rostopic" type="rostopic" args="pub joint_trajectory trajectory_msgs/JointTrajectory &quot;{header: auto, joint_names: ['motor'],points: [{velocities: [-2048]}]}&quot; -l -r 20" output="screen"/>
+    <node name="lidar_control" pkg="rostopic" type="rostopic" args="pub joint_trajectory trajectory_msgs/JointTrajectory &quot;{header: auto, joint_names: ['motor'],points: [{velocities: [-1900]}]}&quot; -l -r 20" output="screen"/>
   </group>
 </launch>
