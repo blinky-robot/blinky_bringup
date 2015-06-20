@@ -16,10 +16,12 @@
   <build_depend>roslaunch</build_depend>
   <run_depend>blinky_base</run_depend>
   <run_depend>blinky_description</run_depend>
+  <run_depend>imu_transformer</run_depend>
   <run_depend>myahrs_driver</run_depend>
   <run_depend>pololu_smc_driver</run_depend>
   <run_depend>robot_pose_ekf</run_depend>
   <run_depend>robot_state_publisher</run_depend>
   <run_depend>roslaunch</run_depend>
+  <run_depend>rostopic</run_depend>
   <run_depend>xv_11_laser_driver</run_depend>
 </package>
