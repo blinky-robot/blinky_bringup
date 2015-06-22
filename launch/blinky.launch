@@ -48,6 +48,6 @@
       <remap from="imu_out/mag" to="imu/mag_fixed" />
     </node>
 
-    <node name="lidar_control" pkg="rostopic" type="rostopic" args="pub joint_trajectory trajectory_msgs/JointTrajectory &quot;{header: auto, joint_names: ['motor'],points: [{velocities: [-1900]}]}&quot; -l -r 20" output="screen"/>
+    <node name="lidar_control" pkg="rostopic" type="rostopic" args="pub joint_trajectory trajectory_msgs/JointTrajectory &quot;{header: auto, joint_names: ['motor'],points: [{velocities: [-2000]}]}&quot; -l -r 20" output="screen"/>
   </group>
 </launch>
